@@ -1,19 +1,22 @@
 import ProjectCard from "./ProjectCard";
 
-function ProjectList({ projects, searchTerm }) {
-  const filteredProjects = projects.filter((project) =>
-    project.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+function ProjectList({ projects }) {
   return (
-    <section className="projects-section">
-      <h2>Projects</h2>
+    <section className="projects-section" id="projects">
+      <h2>My Projects</h2>
 
-      {filteredProjects.length === 0 ? (
-        <p>No projects found.</p>
+      <p>
+        Showing {projects.length} project
+        {projects.length !== 1 ? "s" : ""}
+      </p>
+
+      {projects.length === 0 ? (
+        <p className="no-projects">
+          No projects found. Try another search.
+        </p>
       ) : (
-        <div className="project-list">
-          {filteredProjects.map((project) => (
+        <div className="project-grid">
+          {projects.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}

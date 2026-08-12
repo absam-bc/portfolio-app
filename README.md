@@ -1,16 +1,76 @@
-# React + Vite
+# My Project Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Single Page Application built with React that allows users to create, search, and view projects in a personal portfolio.
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was created as part of the Moringa School Summative Lab: Single Page Application (SPA) with React.
 
-## React Compiler
+The application provides a simple portfolio platform where users can:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- View projects
+- Add new projects dynamically
+- Search for projects
+- View individual project details
+- Navigate between pages using React Router
+- Use the application on desktop and mobile devices
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Project Listing
+
+The home page displays all projects that have been added to the application.
+
+Each project is displayed using a reusable `ProjectCard` component.
+
+### 2. Add Projects
+
+Users can add a new project using the project form.
+
+Each project contains:
+
+- Project title
+- Project description
+- Unique project ID
+
+The form prevents empty projects from being submitted.
+
+### 3. Search Projects
+
+Users can search for projects using the search bar.
+
+The search feature checks both:
+
+- Project title
+- Project description
+
+The search is case-insensitive.
+
+### 4. Project Details
+
+Each project has a `View Details` link.
+
+React Router is used to navigate to an individual project page.
+
+Example route:
+
+`/projects/:id`
+
+### 5. Responsive Design
+
+The application uses CSS media queries to provide a responsive layout for:
+
+- Desktop computers
+- Tablets
+- Mobile devices
+
+## Technologies Used
+
+- React
+- JavaScript
+- HTML
+- CSS
+- React Router
+- Vite
+- React Testing Library
+- Vitest

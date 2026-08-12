@@ -1,18 +1,15 @@
 function SearchBar({ searchTerm, setSearchTerm }) {
-  function handleSearch(event) {
-    setSearchTerm(event.target.value);
-  }
-
   return (
-    <section className="search-section">
-      <label htmlFor="search">Search Projects</label>
+    <section className="search-container">
+      <h2>Find a Project</h2>
 
       <input
-        id="search"
         type="text"
+        placeholder="Type a project name..."
         value={searchTerm}
-        onChange={handleSearch}
-        placeholder="Search projects..."
+        onChange={(event) => {
+          setSearchTerm(event.target.value);
+        }}
       />
     </section>
   );
